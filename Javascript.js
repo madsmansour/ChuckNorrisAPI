@@ -1,4 +1,4 @@
-// const fetch = require('node-fetch'); skal bruges til at kører det node i konsollen til fetch
+//const fetch = require('node-fetch'); //skal bruges til at kører det node i konsollen til fetch
 
 var categories = [
     "animal",
@@ -18,6 +18,7 @@ var categories = [
     "sport",
     "travel"
     ];
+    
     var select = document.getElementById("select");  
     
     for(var i = 0; i < categories.length; i++) {
@@ -27,9 +28,6 @@ var categories = [
         el.value = opt;
         select.appendChild(el);
     }
-
-
-    
     
 let x = () =>
 {
@@ -48,8 +46,10 @@ fetch(`https://api.chucknorris.io/jokes/random?category=${optionValue}`, {
 .catch(error => console.error(error))
 }
 
+taClear = () => {
+  document.getElementById("textArea").value = null;
+}
 
-
-
-
+let button2 = document.getElementById("clearText");
+button2.addEventListener("click", taClear);
 
