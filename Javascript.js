@@ -1,9 +1,5 @@
 // const fetch = require('node-fetch'); skal bruges til at kører det node i konsollen til fetch
 
-console.log("hej");
-(function(){
-console.log("ready");
-})();
 var categories = [
     "animal",
     "career",
@@ -27,14 +23,21 @@ var categories = [
     for(var i = 0; i < categories.length; i++) {
         var opt = categories[i];
         var el = document.createElement("option");
-        el.textContent = opt + " Chuck fact";
+        el.textContent = opt + " fact";
         el.value = opt;
         select.appendChild(el);
     }
 
+
+    
+    
 let x = () =>
 {
-fetch('https://api.chucknorris.io/jokes/random', {
+  var e = document.getElementById("select");
+  var value = e.options[e.selectedIndex].value;
+  var optionValue = value;
+
+fetch(`https://api.chucknorris.io/jokes/random?category=${optionValue}`, {
   credentials: 'include', // Useful for including session ID (and, IIRC, authorization headers)
 })
 .then(response => response.json())

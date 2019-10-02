@@ -1,0 +1,11 @@
+#myButton {
+    font-size: 2vw;
+    color: black;
+}
+
+#select {
+    width: 30vw;
+    height: auto;
+    margin: 0 auto;
+    color: black;
+}
