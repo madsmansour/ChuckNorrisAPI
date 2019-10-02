@@ -6,12 +6,11 @@
 #select {
     width: 30vw;
     height: auto;
-    margin: 0 auto;
-    color: black;
 }
 
 #middle-col{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 10px;
 }
